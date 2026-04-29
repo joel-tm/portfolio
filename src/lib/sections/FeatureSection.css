@@ -1,0 +1,203 @@
+.feature-band {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 2rem;
+  background:
+    radial-gradient(circle at 65% 60%, rgba(64, 204, 255, 0.35), transparent 0 18%),
+    linear-gradient(180deg, rgba(18, 84, 137, 0.88), rgba(8, 51, 87, 0.96));
+  border-top: 1px solid rgba(122, 211, 255, 0.14);
+  border-bottom: 1px solid rgba(122, 211, 255, 0.14);
+}
+
+.feature-band .screen-stack {
+  position: relative;
+  min-height: 310px;
+}
+
+.feature-band .screen-main,
+.feature-band .screen-tablet,
+.feature-band .screen-phone {
+  position: absolute;
+  border-radius: 18px;
+  border: 1px solid rgba(199, 241, 255, 0.25);
+  background: linear-gradient(180deg, rgba(20, 46, 77, 0.95), rgba(9, 18, 35, 0.96));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.feature-band .screen-main {
+  top: 18px;
+  left: 18%;
+  width: 52%;
+  min-height: 210px;
+  padding: 1.4rem;
+}
+
+.feature-band .screen-main::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  background:
+    radial-gradient(circle at 50% 55%, rgba(76, 217, 255, 0.26), transparent 0 28%),
+    linear-gradient(180deg, rgba(33, 127, 190, 0.4), rgba(4, 17, 32, 0.55));
+  border-radius: 12px;
+}
+
+.feature-band .screen-label,
+.feature-band .screen-main strong {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-band .screen-label,
+.feature-band .feature-mini-grid strong,
+.feature-band .feature-mini-grid small,
+.feature-band .secondary-button {
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+}
+
+.feature-band .screen-label {
+  display: inline-block;
+  letter-spacing: 0.18em;
+  color: #b2f1ff;
+}
+
+.feature-band .screen-main strong {
+  display: block;
+  max-width: 9ch;
+  margin-top: 1rem;
+  font-size: 2.1rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.feature-band .screen-tablet {
+  bottom: 6px;
+  left: 4%;
+  width: 26%;
+  height: 120px;
+}
+
+.feature-band .screen-phone {
+  right: 18%;
+  bottom: 10px;
+  width: 11%;
+  height: 145px;
+}
+
+.feature-band .feature-copy {
+  padding-right: 2rem;
+}
+
+.feature-band .feature-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: 1.5rem;
+  background: rgba(180, 233, 255, 0.15);
+}
+
+.feature-band .feature-mini-grid div {
+  padding: 1rem 0.7rem;
+  text-align: center;
+  background: rgba(19, 70, 113, 0.55);
+}
+
+.feature-band .feature-mini-grid strong,
+.feature-band .feature-mini-grid small {
+  display: block;
+}
+
+.feature-band .feature-mini-grid strong {
+  color: #dbf7ff;
+  letter-spacing: 0.12em;
+}
+
+.feature-band .feature-mini-grid small {
+  margin-top: 0.25rem;
+  color: rgba(218, 244, 255, 0.6);
+  letter-spacing: 0.12em;
+}
+
+.feature-band .feature-copy h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  line-height: 0.95;
+}
+
+.feature-band .feature-copy p {
+  max-width: 34rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.feature-band .feature-copy ul {
+  padding: 0;
+  margin: 1.2rem 0 1.5rem;
+  list-style: none;
+}
+
+.feature-band .feature-copy li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-band .feature-copy li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #86efff;
+}
+
+.feature-band .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 208px;
+  min-height: 48px;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  background: rgba(9, 37, 62, 0.58);
+  border: 1px solid rgba(150, 233, 255, 0.3);
+}
+
+@media (max-width: 1080px) {
+  .feature-band {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-band .feature-copy {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .feature-band .feature-mini-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-band,
+  .feature-band .feature-mini-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .feature-band .screen-main {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  .feature-band .screen-tablet,
+  .feature-band .screen-phone {
+    display: none;
+  }
+}
