@@ -66,9 +66,11 @@ button {
 }
 
 .portfolio-frame {
-  width: min(1280px, 100%);
+  width: 100%;
   margin: 0 auto;
-  background: linear-gradient(180deg, rgba(14, 37, 63, 0.44), rgba(7, 10, 18, 0));
+  background:
+    linear-gradient(180deg, rgba(14, 37, 63, 0.32), rgba(7, 10, 18, 0)),
+    linear-gradient(90deg, rgba(23, 66, 108, 0.16) 0%, rgba(14, 37, 63, 0.08) 16%, rgba(14, 37, 63, 0.08) 84%, rgba(23, 66, 108, 0.16) 100%);
 }
 @media (max-width: 1080px) {
 }
