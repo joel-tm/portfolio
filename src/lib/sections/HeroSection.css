@@ -25,6 +25,52 @@
     linear-gradient(180deg, rgba(97, 183, 255, 0.12), rgba(24, 58, 92, 0.04) 30%, rgba(4, 8, 15, 0.34) 78%, rgba(5, 8, 15, 0.72) 100%);
 }
 
+.hero-shell .hero-sky::before,
+.hero-shell .hero-sky::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero-shell .hero-sky::before {
+  inset: -10% -12% 20%;
+  background:
+    linear-gradient(114deg, transparent 36.2%, rgba(174, 236, 255, 0.11) 37.4%, rgba(174, 236, 255, 0.11) 38.2%, transparent 39.6%),
+    linear-gradient(106deg, transparent 42.4%, rgba(150, 228, 255, 0.1) 43.5%, rgba(150, 228, 255, 0.1) 44.4%, transparent 45.7%),
+    linear-gradient(98deg, transparent 46.9%, rgba(134, 222, 255, 0.09) 48.1%, rgba(134, 222, 255, 0.09) 48.8%, transparent 50.2%),
+    linear-gradient(90deg, transparent 49.1%, rgba(167, 236, 255, 0.13) 49.7%, rgba(167, 236, 255, 0.13) 50.3%, transparent 50.9%),
+    linear-gradient(90deg, transparent 51.1%, rgba(146, 229, 255, 0.1) 51.8%, rgba(146, 229, 255, 0.1) 52.3%, transparent 53%),
+    linear-gradient(82deg, transparent 52.8%, rgba(128, 219, 255, 0.09) 54.1%, rgba(128, 219, 255, 0.09) 54.9%, transparent 56.2%),
+    linear-gradient(74deg, transparent 57.2%, rgba(118, 216, 255, 0.1) 58.3%, rgba(118, 216, 255, 0.1) 59.2%, transparent 60.5%),
+    linear-gradient(66deg, transparent 62.8%, rgba(108, 210, 255, 0.09) 64.1%, rgba(108, 210, 255, 0.09) 64.9%, transparent 66.3%);
+  mix-blend-mode: screen;
+  opacity: 0.46;
+  filter: blur(0.6px);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.32) 72%, transparent 100%);
+  transform-origin: 50% 0%;
+  animation: heroRaysDrift 22s ease-in-out infinite alternate;
+}
+
+.hero-shell .hero-sky::after {
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% -12%, rgba(126, 226, 255, 0.3), rgba(126, 226, 255, 0.08) 24%, rgba(126, 226, 255, 0) 54%),
+    radial-gradient(ellipse at 52% 82%, rgba(92, 201, 255, 0.14), rgba(92, 201, 255, 0) 58%);
+  opacity: 0.44;
+}
+
+@keyframes heroRaysDrift {
+  0% {
+    transform: translate3d(-1.1%, -0.6%, 0) scale(1.01);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translate3d(1.1%, 0.9%, 0) scale(1.05);
+    opacity: 0.52;
+  }
+}
+
 .hero-shell .top-command {
   position: relative;
   z-index: 2;
