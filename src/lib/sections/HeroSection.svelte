@@ -70,7 +70,7 @@
       <!--below is the top part --->
       <div class="brand-mark">
         <span class="brand-wings"></span>
-        <strong>JOEL</strong>
+        <strong>JO</strong>
         <small>software Engineer</small>
       </div>
 
