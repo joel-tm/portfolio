@@ -30,14 +30,16 @@
 </script>
 
 <section class="services-strip" id="services">
-  {#each services as service}
-    <article class="service-card">
-      <div class="service-icon">
-        <span>{service.icon}</span>
-      </div>
-      <h2>{service.title}</h2>
-      <p>{service.text}</p>
-      <a href="#contact">{service.link}</a>
-    </article>
-  {/each}
+  <div class="section-inner services-grid">
+    {#each services as service}
+      <article class="service-card">
+        <div class="service-icon">
+          <span>{service.icon}</span>
+        </div>
+        <h2>{service.title}</h2>
+        <p>{service.text}</p>
+        <a href="#contact">{service.link}</a>
+      </article>
+    {/each}
+  </div>
 </section>

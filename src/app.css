@@ -65,13 +65,18 @@ button {
   min-height: 100vh;
 }
 
-.portfolio-frame {
-  width: 100%;
-  margin: 0 auto;
+.portfolio-shell {
+  min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(14, 37, 63, 0.32), rgba(7, 10, 18, 0)),
-    linear-gradient(90deg, rgba(23, 66, 108, 0.16) 0%, rgba(14, 37, 63, 0.08) 16%, rgba(14, 37, 63, 0.08) 84%, rgba(23, 66, 108, 0.16) 100%);
+    radial-gradient(circle at 50% 10%, rgba(85, 176, 235, 0.12), transparent 0 24%),
+    linear-gradient(180deg, rgba(18, 57, 95, 0.82) 0%, rgba(12, 35, 60, 0.92) 36%, rgba(5, 10, 18, 0.98) 100%);
 }
+
+.section-inner {
+  width: min(1380px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
 @media (max-width: 1080px) {
 }
 
@@ -79,7 +84,7 @@ button {
 }
 
 @media (max-width: 640px) {
-  .portfolio-frame {
+  .section-inner {
     width: 100%;
   }
 }

@@ -1,9 +1,12 @@
 .services-strip {
+  padding: 0 1rem;
+  background: rgba(111, 206, 255, 0.08);
+}
+
+.services-strip .services-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
-  padding: 0 1rem;
-  background: rgba(111, 206, 255, 0.08);
 }
 
 .services-strip .service-card {
@@ -57,16 +60,19 @@
 }
 
 @media (max-width: 860px) {
-  .services-strip {
+  .services-strip .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
   .services-strip {
-    grid-template-columns: 1fr;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .services-strip .services-grid {
+    grid-template-columns: 1fr;
   }
 
   .services-strip .service-card {
