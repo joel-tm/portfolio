@@ -4,7 +4,6 @@
   background:
     radial-gradient(circle at 50% 10%, rgba(118, 202, 255, 0.12), transparent 0 26%),
     linear-gradient(180deg, rgba(41, 96, 146, 0.72) 0%, rgba(26, 69, 108, 0.58) 16%, rgba(12, 31, 52, 0.82) 42%, rgba(5, 10, 18, 0.96) 100%);
-  border-bottom: 1px solid rgba(98, 202, 255, 0.18);
 }
 
 .hero-shell::before {
