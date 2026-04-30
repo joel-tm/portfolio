@@ -1,20 +1,32 @@
-.services-strip {
-  padding: 5rem 1rem;
+.services-section {
+  position: relative;
+  padding: 5rem 0;
 }
 
-.services-strip .services-grid {
+.services-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(5rem - 2.9rem + 41px);
+  bottom: 0;
+  background: rgba(5, 25, 34, 0.08);
+  border-top: 1px solid rgba(98, 202, 255, 0.18);
+}
+
+.services-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
 }
 
-.services-strip .service-card {
+.service-card {
   padding: 2.7rem 1.5rem 1.8rem;
   text-align: center;
   background: linear-gradient(180deg, #11141c, #0a0d14 100%);
 }
 
-.services-strip .service-icon {
+.service-icon {
   display: grid;
   place-items: center;
   width: 82px;
@@ -26,25 +38,25 @@
   box-shadow: 0 0 0 8px rgba(10, 13, 20, 1), 0 0 28px rgba(34, 215, 255, 0.18);
 }
 
-.services-strip .service-icon span {
+.service-icon span {
   font-size: 1.5rem;
   color: var(--cyan-soft);
 }
 
-.services-strip .service-card h2 {
+.service-card h2 {
   margin: 0 0 0.9rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-.services-strip .service-card p {
+.service-card p {
   min-height: 120px;
   margin: 0;
   color: var(--muted);
   line-height: 1.75;
 }
 
-.services-strip .service-card a {
+.service-card a {
   display: inline-block;
   margin-top: 1rem;
   font-family: 'Chakra Petch', sans-serif;
@@ -54,27 +66,27 @@
   color: #79e9ff;
 }
 
-.services-strip .service-card a:hover {
+.service-card a:hover {
   color: #b4f6ff;
 }
 
 @media (max-width: 860px) {
-  .services-strip .services-grid {
+  .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  .services-strip {
+  .services-section {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
 
-  .services-strip .services-grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .services-strip .service-card {
+  .service-card {
     padding-top: 3rem;
   }
 }
