@@ -1,14 +1,17 @@
 .feature-band {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 2rem;
-  align-items: center;
   padding: 3rem 2rem;
   background:
     radial-gradient(circle at 65% 60%, rgba(64, 204, 255, 0.35), transparent 0 18%),
     linear-gradient(180deg, rgba(18, 84, 137, 0.88), rgba(8, 51, 87, 0.96));
   border-top: 1px solid rgba(122, 211, 255, 0.14);
   border-bottom: 1px solid rgba(122, 211, 255, 0.14);
+}
+
+.feature-band .feature-band-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
 }
 
 .feature-band .screen-stack {
@@ -167,7 +170,7 @@
 }
 
 @media (max-width: 1080px) {
-  .feature-band {
+  .feature-band .feature-band-inner {
     grid-template-columns: 1fr;
   }
 
@@ -183,11 +186,14 @@
 }
 
 @media (max-width: 640px) {
-  .feature-band,
-  .feature-band .feature-mini-grid {
-    grid-template-columns: 1fr;
+  .feature-band {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .feature-band .feature-band-inner,
+  .feature-band .feature-mini-grid {
+    grid-template-columns: 1fr;
   }
 
   .feature-band .screen-main {

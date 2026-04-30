@@ -56,58 +56,60 @@
 <section class="hero-shell">
   <div class="hero-sky"></div>
 
-  <header class="top-command">
-    <div class="command-grid command-grid-left">
-      {#each navLeft as item}
-        <a class="nav-tile" href="#services">
-          <span class="nav-glyph"></span>
-          <strong>{item.title}</strong>
-          <small>{item.subtitle}</small>
-        </a>
-      {/each}
-    </div>
-<!--below is the top part --->
-    <div class="brand-mark">
-      <span class="brand-wings"></span>
-      <strong>JOEL</strong>
-      <small>software Engineer</small>
-    </div>
-
-    <div class="command-grid command-grid-right">
-      {#each navRight as item}
-        <a class="nav-tile" href="#contact">
-          <span class="nav-glyph"></span>
-          <strong>{item.title}</strong>
-          <small>{item.subtitle}</small>
-        </a>
-      {/each}
-    </div>
-  </header>
-
-  <div class="hero-stage" use:trackPointer>
-    <button class="stage-arrow stage-arrow-left" aria-label="Previous section"></button>
-    <button class="stage-arrow stage-arrow-right" aria-label="Next section"></button>
-
-    <div class="particle-field" aria-hidden="true">
-      {#each particles as particle}
-        <span
-          class="particle"
-          style={`left: calc(${particle.x}% + ${pointerX * particle.depth * 18}px); top: calc(${particle.y}% + ${pointerY * particle.depth * 18}px); width: ${particle.size}px; height: ${particle.size}px; opacity: ${particle.opacity};`}
-        ></span>
-      {/each}
-    </div>
-
-    <div class="hero-copy">
-      <div class="hero-dots" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
+  <div class="section-inner">
+    <header class="top-command">
+      <div class="command-grid command-grid-left">
+        {#each navLeft as item}
+          <a class="nav-tile" href="#services">
+            <span class="nav-glyph"></span>
+            <strong>{item.title}</strong>
+            <small>{item.subtitle}</small>
+          </a>
+        {/each}
+      </div>
+      <!--below is the top part --->
+      <div class="brand-mark">
+        <span class="brand-wings"></span>
+        <strong>JOEL</strong>
+        <small>software Engineer</small>
       </div>
 
-      <p class="eyebrow">Software architecture</p>
-      <h1>Software Engineer</h1>
-      <p class="hero-subtitle">Full-stack systems, modern web interfaces, and mobile-ready product delivery.</p>
-      <a class="launch-button" href="#services">Launch Portfolio</a>
+      <div class="command-grid command-grid-right">
+        {#each navRight as item}
+          <a class="nav-tile" href="#contact">
+            <span class="nav-glyph"></span>
+            <strong>{item.title}</strong>
+            <small>{item.subtitle}</small>
+          </a>
+        {/each}
+      </div>
+    </header>
+
+    <div class="hero-stage" use:trackPointer>
+      <button class="stage-arrow stage-arrow-left" aria-label="Previous section"></button>
+      <button class="stage-arrow stage-arrow-right" aria-label="Next section"></button>
+
+      <div class="particle-field" aria-hidden="true">
+        {#each particles as particle}
+          <span
+            class="particle"
+            style={`left: calc(${particle.x}% + ${pointerX * particle.depth * 18}px); top: calc(${particle.y}% + ${pointerY * particle.depth * 18}px); width: ${particle.size}px; height: ${particle.size}px; opacity: ${particle.opacity};`}
+          ></span>
+        {/each}
+      </div>
+
+      <div class="hero-copy">
+        <div class="hero-dots" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="eyebrow">Software architecture</p>
+        <h1>Software Engineer</h1>
+        <p class="hero-subtitle">Full-stack systems, modern web interfaces, and mobile-ready product delivery.</p>
+        <a class="launch-button" href="#services">Launch Portfolio</a>
+      </div>
     </div>
   </div>
 </section>

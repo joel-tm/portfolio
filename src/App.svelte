@@ -10,7 +10,7 @@
   <title>Joel | Software Developer</title>
 </svelte:head>
 
-<main class="portfolio-frame">
+<main class="portfolio-shell">
   <HeroSection />
   <ServicesSection />
   <FeatureSection />

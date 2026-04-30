@@ -1,10 +1,13 @@
 .brand-row {
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(8, 11, 18, 0.94), rgba(5, 7, 12, 1));
+}
+
+.brand-row .brand-row-inner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: center;
-  padding: 2rem;
-  background: linear-gradient(180deg, rgba(8, 11, 18, 0.94), rgba(5, 7, 12, 1));
 }
 
 .brand-row .eyebrow,
@@ -57,7 +60,7 @@
 }
 
 @media (max-width: 1080px) {
-  .brand-row {
+  .brand-row .brand-row-inner {
     grid-template-columns: 1fr;
   }
 }
@@ -69,10 +72,13 @@
 }
 
 @media (max-width: 640px) {
-  .brand-row,
-  .brand-row .brand-list {
-    grid-template-columns: 1fr;
+  .brand-row {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .brand-row .brand-row-inner,
+  .brand-row .brand-list {
+    grid-template-columns: 1fr;
   }
 }
