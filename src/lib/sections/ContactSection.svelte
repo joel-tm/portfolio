@@ -1,7 +1,5 @@
 <script>
   import './ContactSection.css';
-
-  const brands = ['Svelte', 'TypeScript', 'Node', 'Postgres', 'Docker', 'GitHub'];
 </script>
 
 <footer class="brand-row" id="contact-form">
@@ -33,12 +31,6 @@
 
         <button type="submit">Send Message</button>
       </form>
-    </div>
-
-    <div class="brand-list" aria-label="Technology stack">
-      {#each brands as brand}
-        <span>{brand}</span>
-      {/each}
     </div>
   </div>
 </footer>
