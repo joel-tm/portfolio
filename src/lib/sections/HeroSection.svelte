@@ -2,8 +2,8 @@
   import './HeroSection.css';
 
   const navLeft = [
-    { title: 'Launch', subtitle: 'portfolio' },
-    { title: 'Design', subtitle: 'tooling' },
+    { title: 'Launch', subtitle: 'portfolio', href: '#services' },
+    { title: 'Tech', subtitle: 'stack', href: '#tech-stack' },
   ];
 
   const navRight = [
@@ -58,7 +58,7 @@
     <header class="top-command">
       <div class="command-grid command-grid-left">
         {#each navLeft as item}
-          <a class="nav-tile" href="#services">
+          <a class="nav-tile" href={item.href}>
             <span class="nav-glyph"></span>
             <strong>{item.title}</strong>
             <small>{item.subtitle}</small>
