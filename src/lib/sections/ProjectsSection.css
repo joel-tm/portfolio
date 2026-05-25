@@ -63,18 +63,31 @@
   border-right: 1px solid rgba(22, 36, 56, 0.5);
   color: inherit;
   text-align: left;
-  cursor: pointer;
   scroll-snap-align: center;
   transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
   filter: saturate(0.92);
 }
 
 .projects-section .project-card:hover,
-.projects-section .project-card:focus-visible {
+.projects-section .project-card:focus-within {
   transform: translateY(-6px);
   filter: saturate(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
-  outline: none;
+}
+
+.projects-section .project-open {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.projects-section .project-open:focus-visible {
+  outline: 2px solid rgba(124, 223, 255, 0.72);
+  outline-offset: -2px;
 }
 
 .projects-section .project-media {
@@ -108,6 +121,29 @@
   margin: 0;
   color: rgba(220, 238, 255, 0.7);
   line-height: 1.45;
+}
+
+.projects-section .project-github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.1rem 1.15rem;
+  min-height: 2.2rem;
+  border: 1px solid rgba(114, 218, 255, 0.58);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(58, 208, 255, 0.26), rgba(11, 85, 124, 0.36));
+  color: rgba(220, 244, 255, 0.96);
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(63, 203, 255, 0.2);
+}
+
+.projects-section .project-github-link:hover {
+  filter: brightness(1.08);
 }
 
 .projects-section .projects-arrow {
@@ -224,6 +260,11 @@
   margin: 1rem 0 0;
   color: rgba(220, 238, 255, 0.8);
   line-height: 1.7;
+}
+
+.projects-section .project-github-link-modal {
+  margin: 1.2rem 0 0;
+  min-width: 180px;
 }
 
 @media (max-width: 1080px) {
