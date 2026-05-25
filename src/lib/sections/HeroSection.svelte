@@ -107,7 +107,7 @@
 
         <p class="eyebrow">Software architecture</p>
         <h1>Software Engineer</h1>
-        <p class="hero-subtitle">Full-stack systems, modern web interfaces, and mobile-ready product delivery.</p>
+        <p class="hero-subtitle">Full-stack systems, modern web interfaces, and cloud-infrastructure deployment.</p>
         <a class="launch-button" href="#services">Launch Portfolio</a>
       </div>
     </div>
