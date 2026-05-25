@@ -3,6 +3,7 @@
   import FeatureSection from './lib/sections/FeatureSection.svelte';
   import HeroSection from './lib/sections/HeroSection.svelte';
   import InsightsSection from './lib/sections/InsightsSection.svelte';
+  import ProjectsSection from './lib/sections/ProjectsSection.svelte';
   import ServicesSection from './lib/sections/ServicesSection.svelte';
 </script>
 
@@ -13,6 +14,7 @@
 <main class="portfolio-shell">
   <HeroSection />
   <ServicesSection />
+  <ProjectsSection />
   <FeatureSection />
   <InsightsSection />
   <ContactSection />
