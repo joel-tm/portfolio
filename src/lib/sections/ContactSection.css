@@ -9,13 +9,12 @@
 
 .brand-row .brand-row-inner {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
 }
 
-.brand-row .eyebrow,
-.brand-row .brand-list span {
+.brand-row .eyebrow {
   font-family: 'Chakra Petch', sans-serif;
   text-transform: uppercase;
 }
@@ -104,30 +103,9 @@
   filter: brightness(1.06);
 }
 
-.brand-row .brand-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.brand-row .brand-list span {
-  display: grid;
-  place-items: center;
-  min-height: 70px;
-  border: 1px solid rgba(98, 202, 255, 0.12);
-  color: rgba(214, 237, 255, 0.52);
-  letter-spacing: 0.12em;
-}
-
 @media (max-width: 1080px) {
   .brand-row .brand-row-inner {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 860px) {
-  .brand-row .brand-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -137,8 +115,7 @@
     padding-right: 0.75rem;
   }
 
-  .brand-row .brand-row-inner,
-  .brand-row .brand-list {
+  .brand-row .brand-row-inner {
     grid-template-columns: 1fr;
   }
 }
