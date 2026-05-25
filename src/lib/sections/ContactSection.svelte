@@ -4,7 +4,7 @@
   const brands = ['Svelte', 'TypeScript', 'Node', 'Postgres', 'Docker', 'GitHub'];
 </script>
 
-<footer class="brand-row" id="contact">
+<footer class="brand-row" id="contact-form">
   <div class="section-inner brand-row-inner">
     <div class="contact-block">
       <p class="eyebrow">Get In Touch</p>
@@ -15,7 +15,7 @@
         <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
 
-      <form class="contact-form" id="contact-form" action="#" method="post">
+      <form class="contact-form" action="#" method="post">
         <label>
           Name
           <input type="text" name="name" autocomplete="name" required />

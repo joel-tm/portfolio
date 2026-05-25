@@ -3,6 +3,10 @@
   background: linear-gradient(180deg, rgba(8, 11, 18, 0.94), rgba(5, 7, 12, 1));
 }
 
+#contact-form {
+  scroll-margin-top: 1rem;
+}
+
 .brand-row .brand-row-inner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;

@@ -5,6 +5,7 @@
   import InsightsSection from './lib/sections/InsightsSection.svelte';
   import ProjectsSection from './lib/sections/ProjectsSection.svelte';
   import ServicesSection from './lib/sections/ServicesSection.svelte';
+  import TechStackSection from './lib/sections/TechStackSection.svelte';
 </script>
 
 <svelte:head>
@@ -15,6 +16,7 @@
   <HeroSection />
   <ServicesSection />
   <ProjectsSection />
+  <TechStackSection />
   <FeatureSection />
   <InsightsSection />
   <ContactSection />
