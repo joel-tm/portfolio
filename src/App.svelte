@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>Joel | Software Developer</title>
+  <title>Jo | Software Developer</title>
 </svelte:head>
 
 <main class="portfolio-shell">
