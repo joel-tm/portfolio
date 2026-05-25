@@ -2,15 +2,13 @@
   import './HeroSection.css';
 
   const navLeft = [
-    { title: 'Innovative', subtitle: 'systems' },
     { title: 'Launch', subtitle: 'portfolio' },
     { title: 'Design', subtitle: 'tooling' },
   ];
 
   const navRight = [
-    { title: 'Space', subtitle: 'projects' },
-    { title: 'Get In', subtitle: 'touch' },
-    { title: 'Quick', subtitle: 'quote' },
+    { title: 'Personal', subtitle: 'projects', href: '#projects' },
+    { title: 'Get In', subtitle: 'touch', href: '#contact-form' },
   ];
 
   const particles = [
@@ -76,7 +74,7 @@
 
       <div class="command-grid command-grid-right">
         {#each navRight as item}
-          <a class="nav-tile" href="#contact">
+          <a class="nav-tile" href={item.href}>
             <span class="nav-glyph"></span>
             <strong>{item.title}</strong>
             <small>{item.subtitle}</small>
