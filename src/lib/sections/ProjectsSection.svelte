@@ -7,30 +7,35 @@
       subtitle: 'OPERATIONS AUTOMATION FOR DELIVERY TEAMS',
       text: 'A workflow platform that unifies approvals, SLA tracking, and escalation handling for distributed operations.',
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+      github: 'https://github.com/',
     },
     {
       title: 'Revenue Insights',
       subtitle: 'ANALYTICS DASHBOARD FOR ENTERPRISE SALES',
       text: 'Data pipelines and visual analytics surfaces that help leadership spot revenue trends and bottlenecks quickly.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+      github: 'https://github.com/',
     },
     {
       title: 'Community Housing',
       subtitle: 'TOOLS TO SUPPORT CITY-SCALE SERVICE DELIVERY',
       text: 'A central case coordination tool helping local teams prioritize requests, route cases, and improve response quality.',
       image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=80',
+      github: 'https://github.com/',
     },
     {
       title: 'Portfolio CMS',
       subtitle: 'LIGHTWEIGHT CONTENT OPERATIONS WORKBENCH',
       text: 'A modular publishing workspace with role-based editing and deployment-safe content workflows.',
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+      github: 'https://github.com/',
     },
     {
       title: 'Signal Assistant',
       subtitle: 'INTELLIGENT ALERT ROUTING FOR SUPPORT SYSTEMS',
       text: 'A triage assistant that clusters incidents and routes critical alerts to the right teams in real time.',
       image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
+      github: 'https://github.com/',
     },
   ];
 
@@ -75,14 +80,17 @@
 
       <div class="projects-track" bind:this={trackNode}>
         {#each projects as project}
-          <button class="project-card" type="button" on:click={() => openProject(project)} aria-label={`Open ${project.title} details`}>
-            <div class="project-media" style={`background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.45)), url(${project.image});`}></div>
-            <div class="project-copy">
-              <h3>{project.title}</h3>
-              <p class="project-subtitle">{project.subtitle}</p>
-              <p>{project.text}</p>
-            </div>
-          </button>
+          <article class="project-card">
+            <button class="project-open" type="button" on:click={() => openProject(project)} aria-label={`Open ${project.title} details`}>
+              <div class="project-media" style={`background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.45)), url(${project.image});`}></div>
+              <div class="project-copy">
+                <h3>{project.title}</h3>
+                <p class="project-subtitle">{project.subtitle}</p>
+                <p>{project.text}</p>
+              </div>
+            </button>
+            <a class="project-github-link" href={project.github} target="_blank" rel="noreferrer">GitHub Repo</a>
+          </article>
         {/each}
       </div>
 
@@ -102,6 +110,7 @@
         <h3>{activeProject.title}</h3>
         <p class="projects-modal-subtitle">{activeProject.subtitle}</p>
         <p>{activeProject.text}</p>
+        <a class="project-github-link project-github-link-modal" href={activeProject.github} target="_blank" rel="noreferrer">GitHub Repo</a>
       </div>
     </div>
   </div>

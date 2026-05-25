@@ -13,6 +13,8 @@
       text: 'A practical approach to logs, metrics, release visibility, and issue triage for small teams that still need high confidence in production.',
     },
   ];
+
+  const profileNote = 'First principles thinker, enjoys building things, likes all engineering, technology, science.';
 </script>
 
 <section class="insights-row">
@@ -25,6 +27,12 @@
             <p class="insight-meta">{article.category}</p>
             <h3>{article.title}</h3>
             <p>{article.text}</p>
+            {#if article.category === 'Engineering Notes'}
+              <p class="insight-context-line">
+                Structured delivery, sharp frontend implementation, and pragmatic engineering decisions. The work consistently balanced speed with maintainability.
+              </p>
+              <p class="insight-profile-note">{profileNote}</p>
+            {/if}
             <a href="#contact">Read more</a>
           </div>
         </article>
