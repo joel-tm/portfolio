@@ -26,11 +26,77 @@
 }
 
 .insights-row .insight-thumb {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.55rem;
   min-height: 128px;
+  padding: 0.7rem;
   background:
     radial-gradient(circle at 40% 32%, rgba(60, 220, 255, 0.7), transparent 0 16%),
     linear-gradient(180deg, rgba(35, 85, 132, 0.8), rgba(7, 17, 31, 0.95));
   border: 1px solid rgba(122, 211, 255, 0.14);
+}
+
+.insights-row .insight-thumb.thumb-engineering {
+  background:
+    radial-gradient(circle at 84% 16%, rgba(118, 232, 255, 0.38), rgba(118, 232, 255, 0) 38%),
+    linear-gradient(180deg, rgba(38, 92, 142, 0.86), rgba(7, 20, 35, 0.96));
+}
+
+.insights-row .insight-thumb.thumb-platform {
+  background:
+    radial-gradient(circle at 16% 84%, rgba(108, 224, 255, 0.32), rgba(108, 224, 255, 0) 44%),
+    linear-gradient(180deg, rgba(30, 78, 122, 0.86), rgba(6, 16, 30, 0.96));
+}
+
+.insights-row .thumb-header,
+.insights-row .thumb-metric {
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+}
+
+.insights-row .thumb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  font-size: 0.58rem;
+  color: rgba(211, 243, 255, 0.86);
+}
+
+.insights-row .thumb-led {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: rgba(126, 231, 255, 0.95);
+  box-shadow: 0 0 10px rgba(96, 220, 255, 0.58);
+}
+
+.insights-row .thumb-bars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  gap: 0.24rem;
+  height: 3.3rem;
+  padding: 0.42rem;
+  border: 1px solid rgba(131, 222, 255, 0.2);
+  border-radius: 0.45rem;
+  background: rgba(8, 24, 39, 0.5);
+}
+
+.insights-row .thumb-bars i {
+  display: block;
+  height: var(--bar);
+  min-height: 0.5rem;
+  border-radius: 0.22rem;
+  background: linear-gradient(180deg, rgba(124, 230, 255, 0.92), rgba(34, 140, 196, 0.86));
+}
+
+.insights-row .thumb-metric {
+  margin: 0;
+  letter-spacing: 0.1em;
+  font-size: 0.56rem;
+  color: rgba(198, 238, 255, 0.82);
 }
 
 .insights-row .insight-meta,

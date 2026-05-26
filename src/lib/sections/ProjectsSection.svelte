@@ -71,7 +71,7 @@
 <section class="projects-section" id="projects">
   <div class="section-inner">
     <div class="projects-head">
-      <p>Selected work</p>
+      <p>Selected</p>
       <h2>Projects</h2>
     </div>
 
