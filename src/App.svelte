@@ -1,5 +1,6 @@
 <script>
   import ContactSection from './lib/sections/ContactSection.svelte';
+  import ExperienceSection from './lib/sections/ExperienceSection.svelte';
   import FeatureSection from './lib/sections/FeatureSection.svelte';
   import HeroSection from './lib/sections/HeroSection.svelte';
   import InsightsSection from './lib/sections/InsightsSection.svelte';
@@ -15,6 +16,7 @@
 <main class="portfolio-shell">
   <HeroSection />
   <ServicesSection />
+  <ExperienceSection />
   <ProjectsSection />
   <TechStackSection />
   <FeatureSection />
