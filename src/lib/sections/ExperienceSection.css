@@ -35,16 +35,31 @@
 
 .experience-section .experience-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .experience-section .experience-card {
-  padding: 1.2rem 1.1rem 1.3rem;
   border: 1px solid rgba(130, 219, 255, 0.2);
   background:
     radial-gradient(circle at 82% -10%, rgba(106, 215, 255, 0.14), rgba(106, 215, 255, 0) 42%),
     linear-gradient(180deg, rgba(16, 34, 54, 0.9), rgba(9, 20, 34, 0.95));
+}
+
+.experience-section .experience-open {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 1.1rem 1.3rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.experience-section .experience-open:focus-visible {
+  outline: 2px solid rgba(137, 226, 255, 0.74);
+  outline-offset: -2px;
 }
 
 .experience-section .period {
@@ -72,6 +87,20 @@
   line-height: 1.65;
 }
 
+.experience-section .experience-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.35rem 0.62rem;
+  border: 1px solid rgba(120, 218, 255, 0.35);
+  border-radius: 999px;
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.66rem;
+  color: rgba(212, 243, 255, 0.9);
+  background: rgba(10, 36, 57, 0.6);
+}
+
 .experience-section ul {
   margin: 0.95rem 0 0;
   padding: 0;
@@ -86,9 +115,131 @@
   color: rgba(161, 226, 255, 0.82);
 }
 
+.experience-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.experience-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(2, 8, 16, 0.76);
+  backdrop-filter: blur(4px);
+}
+
+.experience-modal {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 100%);
+  max-height: min(88vh, 900px);
+  border: 1px solid rgba(140, 225, 255, 0.28);
+  background: linear-gradient(180deg, rgba(14, 31, 49, 0.98), rgba(8, 18, 31, 0.98));
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.52);
+  overflow: hidden;
+}
+
+.experience-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 3;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(170, 233, 255, 0.56);
+  border-radius: 999px;
+  background: rgba(9, 22, 38, 0.92);
+  color: rgba(223, 246, 255, 0.92);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.experience-modal-media {
+  position: relative;
+  height: min(44vh, 320px);
+  background-size: cover;
+  background-position: center;
+}
+
+.experience-image-nav {
+  position: absolute;
+  top: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(184, 236, 255, 0.65);
+  border-radius: 999px;
+  background: rgba(8, 23, 38, 0.78);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.experience-image-nav::before {
+  content: '';
+  position: absolute;
+  top: 0.83rem;
+  left: 0.96rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 2px solid rgba(214, 243, 255, 0.9);
+  border-right: 2px solid rgba(214, 243, 255, 0.9);
+}
+
+.experience-image-nav-left {
+  left: 0.8rem;
+}
+
+.experience-image-nav-left::before {
+  transform: rotate(-135deg);
+}
+
+.experience-image-nav-right {
+  right: 0.8rem;
+}
+
+.experience-image-nav-right::before {
+  transform: rotate(45deg);
+}
+
+.experience-image-counter {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.8rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(8, 26, 42, 0.74);
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 0.64rem;
+  color: rgba(225, 245, 255, 0.9);
+}
+
+.experience-modal-content {
+  max-height: calc(min(88vh, 900px) - min(44vh, 320px));
+  overflow-y: auto;
+  padding: 1.2rem 1.15rem 1.4rem;
+}
+
+.experience-modal-content .detail-line {
+  margin: 0.7rem 0 0;
+  color: rgba(214, 237, 252, 0.8);
+  line-height: 1.7;
+}
+
+.experience-modal-content ul {
+  margin-top: 0.95rem;
+}
+
 @media (max-width: 1080px) {
   .experience-section .experience-grid {
     grid-template-columns: 1fr;
+  }
+
+  .experience-modal {
+    width: min(760px, 100%);
   }
 }
 
@@ -96,5 +247,18 @@
   .experience-section {
     padding-top: 3rem;
     padding-bottom: 3.4rem;
+  }
+
+  .experience-modal-overlay {
+    padding: 0.55rem;
+  }
+
+  .experience-modal-media {
+    height: 220px;
+  }
+
+  .experience-modal-content {
+    max-height: calc(88vh - 220px);
+    padding: 1rem 0.9rem 1.1rem;
   }
 }
