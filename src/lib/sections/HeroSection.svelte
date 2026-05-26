@@ -2,7 +2,7 @@
   import './HeroSection.css';
 
   const navLeft = [
-    { title: 'Launch', subtitle: 'portfolio', href: '#services' },
+    { title: 'View', subtitle: 'experience', href: '#experience' },
     { title: 'Tech', subtitle: 'stack', href: '#tech-stack' },
   ];
 
@@ -104,9 +104,9 @@
         </div>
 
         <p class="eyebrow">Software architecture</p>
-        <h1>Software Engineer</h1>
+        <h1>Full-stack Engineer </h1>
         <p class="hero-subtitle">Full-stack systems, modern web interfaces, and cloud-infrastructure deployment.</p>
-        <a class="launch-button" href="#services">Launch Portfolio</a>
+        <a class="launch-button" href="#experience">View Experience</a>
       </div>
     </div>
   </div>
