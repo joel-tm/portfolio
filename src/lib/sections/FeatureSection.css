@@ -35,6 +35,7 @@
   width: 52%;
   min-height: 210px;
   padding: 1.4rem;
+  z-index: 2;
 }
 
 .feature-band .screen-main::before {
@@ -76,11 +77,99 @@
   text-transform: uppercase;
 }
 
+.feature-band .screen-main-ui {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.8rem;
+  padding: 0.65rem;
+  border: 1px solid rgba(141, 227, 255, 0.2);
+  border-radius: 0.7rem;
+  background: rgba(5, 16, 29, 0.5);
+}
+
+.feature-band .screen-ui-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(189, 236, 255, 0.82);
+  font-size: 0.62rem;
+}
+
+.feature-band .screen-ui-bars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.3rem;
+  align-items: end;
+  height: 2.5rem;
+  margin-top: 0.45rem;
+}
+
+.feature-band .screen-ui-bars i {
+  display: block;
+  height: var(--bar);
+  min-height: 0.65rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(180deg, rgba(110, 227, 255, 0.9), rgba(23, 101, 145, 0.9));
+}
+
+.feature-band .screen-ui-tags {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.feature-band .screen-ui-tags span {
+  padding: 0.18rem 0.4rem;
+  border: 1px solid rgba(143, 229, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(13, 37, 58, 0.7);
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(208, 243, 255, 0.84);
+  font-size: 0.56rem;
+}
+
 .feature-band .screen-tablet {
   bottom: 6px;
   left: 4%;
   width: 26%;
   height: 120px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.feature-band .tablet-ui {
+  display: grid;
+  gap: 0.4rem;
+  height: 100%;
+  padding: 0.65rem;
+}
+
+.feature-band .tablet-ui p {
+  margin: 0;
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(187, 236, 255, 0.84);
+  font-size: 0.62rem;
+}
+
+.feature-band .tablet-wave {
+  height: 2.6rem;
+  border-radius: 0.5rem;
+  background:
+    radial-gradient(circle at 20% 70%, rgba(129, 231, 255, 0.64), rgba(129, 231, 255, 0) 42%),
+    radial-gradient(circle at 54% 40%, rgba(76, 204, 255, 0.48), rgba(76, 204, 255, 0) 48%),
+    linear-gradient(180deg, rgba(18, 67, 104, 0.8), rgba(8, 24, 42, 0.85));
+}
+
+.feature-band .tablet-ui small {
+  color: rgba(198, 237, 255, 0.76);
+  font-size: 0.58rem;
+  letter-spacing: 0.07em;
 }
 
 .feature-band .screen-phone {
@@ -88,6 +177,34 @@
   bottom: 10px;
   width: 11%;
   height: 145px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.feature-band .phone-ui {
+  display: grid;
+  align-content: start;
+  gap: 0.42rem;
+  padding: 0.6rem 0.45rem;
+}
+
+.feature-band .phone-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  background: rgba(137, 234, 255, 0.9);
+  box-shadow: 0 0 10px rgba(85, 211, 255, 0.42);
+}
+
+.feature-band .phone-line {
+  display: block;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(137, 234, 255, 0.68), rgba(41, 133, 189, 0.46));
+}
+
+.feature-band .phone-line.short {
+  width: 72%;
 }
 
 .feature-band .feature-copy {
@@ -202,8 +319,17 @@
     width: 100%;
   }
 
-  .feature-band .screen-tablet,
+  .feature-band .screen-tablet {
+    width: 30%;
+    height: 106px;
+    left: 2%;
+    bottom: 4px;
+  }
+
   .feature-band .screen-phone {
-    display: none;
+    width: 14%;
+    height: 124px;
+    right: 6%;
+    bottom: 6px;
   }
 }
