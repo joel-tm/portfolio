@@ -16,9 +16,9 @@
     },
     {
       icon: '▣',
-      title: 'Mobile-first UI',
-      text: 'Interfaces designed to read well on every screen, with practical performance budgets and deliberate interaction detail.',
-      link: 'mobile design',
+      title: 'Cloud Infrastructure',
+      text: 'I design and manage resilient cloud infrastructure, container workflows, and deployment pipelines for reliable scale and operations.',
+      link: 'infrastructure handling',
     },
     {
       icon: '⟡',
@@ -30,7 +30,7 @@
 </script>
 
 <section class="services-section" id="services">
-  <div class="services-strip" />
+  <div class="services-strip"></div>
   <div class="section-inner services-grid">
     {#each services as service}
       <article class="service-card">
