@@ -97,8 +97,8 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.66rem;
-  color: rgba(212, 243, 255, 0.9);
-  background: rgba(10, 36, 57, 0.6);
+  color: #fff;
+  background: rgba(48, 52, 56, 0.6);
 }
 
 .experience-section ul {

@@ -6,7 +6,7 @@
   <div class="section-inner brand-row-inner">
     <div class="contact-block">
       <p class="eyebrow">Get In Touch</p>
-      <h2>Available for product builds, redesigns, and engineering consulting.</h2>
+      <h3>Available for product builds, redesigns, and engineering consulting.</h3>
       <div class="contact-links">
         <a href="mailto:jo@example.com">jo@example.com</a>
         <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
