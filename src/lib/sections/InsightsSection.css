@@ -1,0 +1,192 @@
+.insights-row {
+  background: rgba(111, 206, 255, 0.08);
+}
+
+.insights-row .insights-row-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1px;
+}
+
+.insights-row .articles-panel,
+.insights-row .testimonial-panel {
+  background: linear-gradient(180deg, #11141c, #0a0d14 100%);
+}
+
+.insights-row .articles-panel {
+  display: grid;
+}
+
+.insights-row .insight-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.2rem;
+  padding: 1.4rem;
+  border-bottom: 1px solid rgba(108, 193, 255, 0.08);
+}
+
+.insights-row .insight-thumb {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.55rem;
+  min-height: 128px;
+  padding: 0.7rem;
+  background:
+    radial-gradient(circle at 40% 32%, rgba(60, 220, 255, 0.7), transparent 0 16%),
+    linear-gradient(180deg, rgba(35, 85, 132, 0.8), rgba(7, 17, 31, 0.95));
+  border: 1px solid rgba(122, 211, 255, 0.14);
+}
+
+.insights-row .insight-thumb.thumb-engineering {
+  background:
+    radial-gradient(circle at 84% 16%, rgba(118, 232, 255, 0.38), rgba(118, 232, 255, 0) 38%),
+    linear-gradient(180deg, rgba(38, 92, 142, 0.86), rgba(7, 20, 35, 0.96));
+}
+
+.insights-row .insight-thumb.thumb-platform {
+  background:
+    radial-gradient(circle at 16% 84%, rgba(108, 224, 255, 0.32), rgba(108, 224, 255, 0) 44%),
+    linear-gradient(180deg, rgba(30, 78, 122, 0.86), rgba(6, 16, 30, 0.96));
+}
+
+.insights-row .thumb-header,
+.insights-row .thumb-metric {
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+}
+
+.insights-row .thumb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  font-size: 0.58rem;
+  color: rgba(211, 243, 255, 0.86);
+}
+
+.insights-row .thumb-led {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: rgba(126, 231, 255, 0.95);
+  box-shadow: 0 0 10px rgba(96, 220, 255, 0.58);
+}
+
+.insights-row .thumb-bars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  gap: 0.24rem;
+  height: 3.3rem;
+  padding: 0.42rem;
+  border: 1px solid rgba(131, 222, 255, 0.2);
+  border-radius: 0.45rem;
+  background: rgba(8, 24, 39, 0.5);
+}
+
+.insights-row .thumb-bars i {
+  display: block;
+  height: var(--bar);
+  min-height: 0.5rem;
+  border-radius: 0.22rem;
+  background: linear-gradient(180deg, rgba(124, 230, 255, 0.92), rgba(34, 140, 196, 0.86));
+}
+
+.insights-row .thumb-metric {
+  margin: 0;
+  letter-spacing: 0.1em;
+  font-size: 0.56rem;
+  color: rgba(198, 238, 255, 0.82);
+}
+
+.insights-row .insight-meta,
+.insights-row .insight-copy a {
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+}
+
+.insights-row .insight-meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.75rem;
+  color: rgba(210, 236, 255, 0.6);
+  letter-spacing: 0.16em;
+}
+
+.insights-row .insight-copy h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.insights-row .insight-copy p,
+.insights-row .testimonial-panel blockquote {
+  color: var(--muted);
+}
+
+.insights-row .insight-copy p {
+  line-height: 1.75;
+}
+
+.insights-row .insight-copy a {
+  display: inline-flex;
+  margin-top: 0.35rem;
+  letter-spacing: 0.12em;
+  color: #83edff;
+}
+
+.insights-row .insight-copy a:hover {
+  color: #b4f6ff;
+}
+
+.insights-row .insight-context-line {
+  margin: 0.7rem 0 0;
+  padding: 0.55rem 0.7rem;
+  border-left: 2px solid rgba(123, 220, 255, 0.55);
+  background: rgba(16, 40, 62, 0.34);
+  color: rgba(214, 239, 255, 0.8);
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.insights-row .insight-profile-note {
+  margin: 0.75rem 0 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid rgba(112, 213, 255, 0.24);
+  border-radius: 0.5rem;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(88, 202, 255, 0.18), rgba(88, 202, 255, 0) 42%),
+    linear-gradient(180deg, rgba(11, 30, 48, 0.58), rgba(7, 18, 29, 0.72));
+  color: rgba(217, 240, 255, 0.8);
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.insights-row .testimonial-panel {
+  display: grid;
+  align-content: center;
+  padding: 2rem;
+}
+
+.insights-row .testimonial-panel blockquote {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+.insights-row .testimonial-author {
+  margin-top: 1.4rem;
+  font-size: 0.9rem;
+  color: rgba(198, 231, 255, 0.58);
+}
+
+@media (max-width: 1080px) {
+  .insights-row .insights-row-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .insights-row .insight-card {
+    grid-template-columns: 1fr;
+  }
+}

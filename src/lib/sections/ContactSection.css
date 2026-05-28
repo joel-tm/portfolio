@@ -1,0 +1,121 @@
+.brand-row {
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(8, 11, 18, 0.94), rgba(5, 7, 12, 1));
+}
+
+#contact-form {
+  scroll-margin-top: 1rem;
+}
+
+.brand-row .brand-row-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.brand-row .eyebrow {
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+}
+
+.brand-row .eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  color: rgba(225, 245, 255, 0.72);
+}
+
+.brand-row .contact-block h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  line-height: 0.95;
+}
+
+.brand-row .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.brand-row .contact-links a {
+  color: var(--muted);
+}
+
+.brand-row .contact-links a:hover {
+  color: #b4f6ff;
+}
+
+.brand-row .contact-form {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.4rem;
+}
+
+.brand-row .contact-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.72rem;
+  color: rgba(206, 236, 255, 0.72);
+}
+
+.brand-row .contact-form input,
+.brand-row .contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(98, 202, 255, 0.24);
+  background: rgba(7, 15, 26, 0.78);
+  color: var(--text);
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.45rem;
+}
+
+.brand-row .contact-form textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.brand-row .contact-form input:focus,
+.brand-row .contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(132, 224, 255, 0.72);
+  box-shadow: 0 0 0 3px rgba(62, 220, 255, 0.12);
+}
+
+.brand-row .contact-form button {
+  justify-self: start;
+  border: 1px solid rgba(117, 218, 255, 0.44);
+  background: linear-gradient(180deg, rgba(48, 199, 255, 0.9), rgba(12, 130, 180, 0.92));
+  color: #032136;
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.brand-row .contact-form button:hover {
+  filter: brightness(1.06);
+}
+
+@media (max-width: 1080px) {
+  .brand-row .brand-row-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-row {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .brand-row .brand-row-inner {
+    grid-template-columns: 1fr;
+  }
+}
