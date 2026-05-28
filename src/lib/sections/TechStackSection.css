@@ -1,0 +1,121 @@
+.tech-stack-section {
+  position: relative;
+  padding: 4rem 0 4.8rem;
+  background:
+    radial-gradient(circle at 50% -8%, rgba(89, 206, 255, 0.26), rgba(89, 206, 255, 0) 34%),
+    linear-gradient(180deg, rgba(6, 16, 30, 0.98), rgba(5, 11, 22, 0.98));
+  border-top: 1px solid rgba(116, 210, 255, 0.14);
+}
+
+.tech-stack-section .tech-stack-head {
+  text-align: center;
+}
+
+.tech-stack-section .kicker,
+.tech-stack-section .subhead,
+.tech-stack-section .tech-panel h3,
+.tech-stack-section .matrix-row span {
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+}
+
+.tech-stack-section .kicker {
+  margin: 0;
+  letter-spacing: 0.2em;
+  color: rgba(171, 228, 255, 0.72);
+  font-size: 0.74rem;
+}
+
+.tech-stack-section .tech-stack-head h2 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  letter-spacing: 0.05em;
+}
+
+.tech-stack-section .subhead {
+  margin: 0;
+  letter-spacing: 0.12em;
+  color: rgba(180, 234, 255, 0.82);
+}
+
+.tech-stack-section .matrix-row {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.tech-stack-section .matrix-row span {
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+  padding: 0.5rem;
+  border: 1px solid rgba(113, 210, 255, 0.2);
+  background: linear-gradient(180deg, rgba(24, 46, 73, 0.6), rgba(8, 18, 31, 0.72));
+  letter-spacing: 0.08em;
+  color: rgba(222, 242, 255, 0.82);
+  font-size: 0.72rem;
+}
+
+.tech-stack-section .tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.tech-stack-section .tech-panel {
+  padding: 1rem 1rem 1.15rem;
+  border: 1px solid rgba(118, 210, 255, 0.2);
+  background:
+    radial-gradient(circle at 80% -12%, rgba(85, 201, 255, 0.16), rgba(85, 201, 255, 0) 35%),
+    linear-gradient(180deg, rgba(13, 29, 48, 0.88), rgba(7, 16, 27, 0.95));
+}
+
+.tech-stack-section .tech-panel h3 {
+  margin: 0;
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  color: rgba(202, 241, 255, 0.9);
+}
+
+.tech-stack-section .tech-panel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-stack-section .tech-panel li {
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(113, 207, 255, 0.3);
+  background: rgba(14, 35, 56, 0.7);
+  color: rgba(230, 245, 255, 0.88);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 1080px) {
+  .tech-stack-section .matrix-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .tech-stack-section .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-stack-section {
+    padding-top: 3rem;
+    padding-bottom: 3.6rem;
+  }
+
+  .tech-stack-section .matrix-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
