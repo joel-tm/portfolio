@@ -105,8 +105,9 @@
   margin: 0.95rem 0 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  gap: 0.38rem;
+  display: flex;       /* Changed from grid to flex */
+  flex-wrap: wrap;     /* Allows tags to drop to the next line if space runs out */
+  gap: 0.5rem 0.8rem;  /* Adds spacing between rows and columns (vertical horizontal) */
 }
 
 .experience-section li {

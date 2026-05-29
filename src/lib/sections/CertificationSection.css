@@ -45,6 +45,33 @@
   gap: 0.9rem;
 }
 
+.certification-section .certification-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.35rem;
+}
+
+.certification-section .certification-toggle {
+  min-width: 168px;
+  min-height: 46px;
+  padding: 0.75rem 1.15rem;
+  border: 1px solid rgba(123, 218, 255, 0.34);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(17, 49, 74, 0.9), rgba(8, 25, 40, 0.92));
+  color: rgba(236, 247, 255, 0.96);
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.certification-section .certification-toggle:hover {
+  filter: brightness(1.06);
+}
+
 .certification-section .certificate-card {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -57,7 +84,7 @@
     radial-gradient(circle at 84% -24%, rgba(84, 201, 255, 0.2), rgba(84, 201, 255, 0) 44%);
 }
 
-.certification-section .cert-chip {
+/* .certification-section .cert-chip {
   align-self: start;
   padding: 0.38rem 0.55rem;
   border-radius: 999px;
@@ -66,7 +93,7 @@
   color: rgba(214, 242, 255, 0.9);
   letter-spacing: 0.09em;
   font-size: 0.62rem;
-}
+} */
 
 .certification-section .cert-copy h3 {
   margin: 0;

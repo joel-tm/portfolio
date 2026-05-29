@@ -109,12 +109,13 @@
 
 .projects-section .project-subtitle {
   margin: 0.8rem auto 1rem;
-  max-width: 20ch;
+  max-width: 90%; /* Changed from 20ch to allow text to breathe */
   font-family: 'Chakra Petch', sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(178, 230, 255, 0.78);
   font-size: 0.78rem;
+  line-height: 1.4; /* Added slight line height for multi-line readability */
 }
 
 .projects-section .project-copy p {
