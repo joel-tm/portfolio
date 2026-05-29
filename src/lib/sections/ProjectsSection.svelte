@@ -1,5 +1,5 @@
 <script>
-  import { onDestroy } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
 
   import './ProjectsSection.css';
 
@@ -51,7 +51,7 @@
   const projects = [
     {
       title: 'Fire Identification using Thermal imaging',
-      subtitle: 'THERMAL IMAGING TOOLKIT FOR COAL MINES',
+      subtitle: 'THERMAL IMAGING TOOLKIT FOR FIRE IDENTIFICATION',
       text: 'Developed a lightweight Python-based toolkit to interface with a Topdon TC001 thermal camera for fire identification and thermal monitoring in coal-mine environments. Implemented camera integration scripts to acquire live thermal frames, capture periodic snapshots, and store timestamped temperature imagery for inspection and analysis. Designed utilities to organize captured images into structured directories, enabling systematic monitoring and manual review of underground conditions.',
       image: fireIdentificationImages[0],
       images: fireIdentificationImages,
@@ -103,6 +103,8 @@
   let activeProject = null;
   let activeImageIndex = 0;
   let autoCycleTimer;
+  let cardCycleTimer;
+  let cardImageIndices = projects.map(() => 0);
 
   function scrollRail(direction) {
     if (!trackNode) {
@@ -164,6 +166,13 @@
     }
   }
 
+  function stopCardCycle() {
+    if (cardCycleTimer) {
+      clearInterval(cardCycleTimer);
+      cardCycleTimer = undefined;
+    }
+  }
+
   function restartAutoCycle() {
     stopAutoCycle();
 
@@ -174,6 +183,21 @@
     autoCycleTimer = setInterval(() => {
       activeImageIndex = (activeImageIndex + 1) % getProjectImages(activeProject).length;
     }, 18000);
+  }
+
+  function startCardCycle() {
+    stopCardCycle();
+
+    cardCycleTimer = setInterval(() => {
+      cardImageIndices = projects.map((project, projectIndex) => {
+        const images = getProjectImages(project);
+        if (images.length < 2) {
+          return 0;
+        }
+
+        return ((cardImageIndices[projectIndex] ?? 0) + 1) % images.length;
+      });
+    }, 10000);
   }
 
   function projectBackground(imageUrl, overlayStrength = 0.45) {
@@ -201,6 +225,11 @@
 
   onDestroy(() => {
     stopAutoCycle();
+    stopCardCycle();
+  });
+
+  onMount(() => {
+    startCardCycle();
   });
 </script>
 
@@ -217,10 +246,13 @@
       <button class="projects-arrow projects-arrow-left" aria-label="Previous projects" on:click={() => scrollRail(-1)}></button>
 
       <div class="projects-track" bind:this={trackNode}>
-        {#each projects as project}
+        {#each projects as project, projectIndex}
           <article class="project-card">
             <button class="project-open" type="button" on:click={() => openProject(project)} aria-label={`Open ${project.title} details`}>
-              <div class="project-media" style={projectBackground(project.image)}></div>
+              <div
+                class="project-media"
+                style={projectBackground(getProjectImages(project)[cardImageIndices[projectIndex] ?? 0] ?? project.image)}
+              ></div>
               <div class="project-copy">
                 <h3>{project.title}</h3>
                 <p class="project-subtitle">{project.subtitle}</p>
