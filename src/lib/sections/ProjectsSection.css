@@ -64,15 +64,15 @@
   color: inherit;
   text-align: left;
   scroll-snap-align: center;
-  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+  transition: transform 280ms ease, box-shadow 280ms ease, filter 280ms ease;
   filter: saturate(0.92);
 }
 
 .projects-section .project-card:hover,
 .projects-section .project-card:focus-within {
-  transform: translateY(-6px);
-  filter: saturate(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
+  transform: translateY(-14px) scale(1.018);
+  filter: saturate(1.08);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.38);
 }
 
 .projects-section .project-open {
@@ -122,6 +122,31 @@
   margin: 0;
   color: rgba(220, 238, 255, 0.7);
   line-height: 1.45;
+}
+
+.projects-section .project-open-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.38rem 0.72rem;
+  border: 1px solid rgba(129, 225, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(10, 31, 49, 0.62);
+  color: #fff;
+  font-family: 'Chakra Petch', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.66rem;
+  font-weight: 700;
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+.projects-section .project-card:hover .project-open-hint,
+.projects-section .project-card:focus-within .project-open-hint {
+  transform: translateY(-2px);
+  background: rgba(17, 49, 74, 0.88);
+  border-color: rgba(147, 232, 255, 0.52);
 }
 
 .projects-section .project-github-link {
@@ -226,9 +251,17 @@
 
 .projects-modal-media {
   position: relative;
-  height: min(72vh, 760px);
-  background-size: cover;
+  /* 1. Reduced height from 72vh down to 42vh max to keep it balanced */
+  height: min(55vh, 720px); 
+  
+  /* 2. Changed from 'cover' to 'contain' so your full screenshots adapt without cropping */
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  
+  /* 3. Added a clean background tint to fill structural empty space on widescreen displays */
+  background-color: rgba(6, 15, 26, 0.6); 
+  border-bottom: 1px solid rgba(145, 223, 255, 0.15);
 }
 
 .projects-image-nav {

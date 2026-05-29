@@ -197,7 +197,7 @@
 
         return ((cardImageIndices[projectIndex] ?? 0) + 1) % images.length;
       });
-    }, 10000);
+    }, 80000);
   }
 
   function projectBackground(imageUrl, overlayStrength = 0.45) {
@@ -257,6 +257,7 @@
                 <h3>{project.title}</h3>
                 <p class="project-subtitle">{project.subtitle}</p>
                 <p>{project.text}</p>
+                <span class="project-open-hint">Open </span>
               </div>
             </button>
             <a class="project-github-link" href={project.github} target="_blank" rel="noreferrer">GitHub Repo</a>
