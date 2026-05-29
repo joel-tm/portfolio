@@ -225,9 +225,64 @@
 }
 
 .projects-modal-media {
-  height: min(46vh, 360px);
+  position: relative;
+  height: min(72vh, 760px);
   background-size: cover;
   background-position: center;
+}
+
+.projects-image-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 1px solid rgba(184, 236, 255, 0.68);
+  border-radius: 999px;
+  background: rgba(8, 24, 40, 0.78);
+  transform: translateY(-50%);
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+}
+
+.projects-image-nav::before {
+  content: '';
+  position: absolute;
+  top: 1.08rem;
+  left: 1.18rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top: 3px solid rgba(218, 244, 255, 0.96);
+  border-right: 3px solid rgba(218, 244, 255, 0.96);
+}
+
+.projects-image-nav-left {
+  left: 1.1rem;
+}
+
+.projects-image-nav-left::before {
+  transform: rotate(-135deg);
+}
+
+.projects-image-nav-right {
+  right: 1.1rem;
+}
+
+.projects-image-nav-right::before {
+  transform: rotate(45deg);
+}
+
+.projects-image-counter {
+  position: absolute;
+  right: 0.95rem;
+  bottom: 0.9rem;
+  padding: 0.22rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(8, 24, 40, 0.72);
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  color: rgba(228, 246, 255, 0.94);
 }
 
 .projects-modal-copy {
@@ -263,7 +318,7 @@
   line-height: 1.7;
 }
 
-.projects-section .project-github-link-modal {
+.project-github-link-modal {
   margin: 1.2rem 0 0;
   min-width: 180px;
 }
@@ -315,6 +370,10 @@
 
   .projects-modal-overlay {
     padding: 0.6rem;
+  }
+
+  .projects-modal-media {
+    height: 360px;
   }
 
   .projects-modal-copy {
