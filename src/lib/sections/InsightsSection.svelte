@@ -60,7 +60,7 @@
       <blockquote>
         Structured delivery, sharp frontend implementation, and pragmatic engineering decisions. The work consistently balanced speed with maintainability.
       </blockquote>
-      <p class="testimonial-author">Client feedback • product engineering engagement</p>
+      <p class="testimonial-author">Product Engineering Engagement</p>
     </aside>
   </div>
 </section>

@@ -68,8 +68,8 @@
       <!--below is the top part --->
       <div class="brand-mark">
         <span class="brand-wings"></span>
-        <strong>JO</strong>
-        <small>software Engineer</small>
+        <strong>Joel</strong>
+        <small>T Mathew</small>
       </div>
 
       <div class="command-grid command-grid-right">

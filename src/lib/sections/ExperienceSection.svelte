@@ -1,42 +1,63 @@
 <script>
   import './ExperienceSection.css';
 
-  const experiences = [
-    {
-      period: '2024 - Present',
-      role: 'Full-stack Engineer',
-      company: 'Independent Consulting',
-      summary: 'Designing and shipping product-ready systems across frontend architecture, APIs, and cloud deployment workflows.',
-      highlights: ['Svelte + TypeScript delivery', 'Cloud infrastructure handling', 'Production release pipelines'],
-      details: [
-        'Led end-to-end delivery for product teams needing both rapid iteration and maintainable architecture.',
-        'Owned cloud deployment flows, observability setup, and release hardening for stable production behavior.',
-        'Delivered design-consistent frontend systems while keeping API and infrastructure decisions practical.',
-      ],
-      images: [
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80',
-        'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80',
-        'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80',
-      ],
-    },
-    {
-      period: '2022 - 2024',
-      role: 'Frontend Engineer',
-      company: 'Product Teams',
-      summary: 'Built scalable UI systems and component libraries focused on consistency, performance, and long-term maintainability.',
-      highlights: ['Design system implementation', 'State and routing strategy', 'Performance budget enforcement'],
-      details: [
-        'Built reusable component patterns and documentation workflows to speed up onboarding and reduce UI drift.',
-        'Improved runtime performance with selective rendering strategy, route-level splitting, and bundle optimization.',
-        'Worked closely with product and design to map roadmap priorities into stable implementation cycles.',
-      ],
-      images: [
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80',
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80',
-        'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80',
-      ],
-    },
-  ];
+
+const experiences = [
+  {
+    period: 'Sep 2025 – Present',
+    role: 'Full Stack Developer',
+    company: 'Yokomet (Client: EQUAM Stiftung, Switzerland)',
+    summary: 'Contributed to PrimaryPROMS, a healthcare web app focused on Patient-Reported Outcome Measures. Built robust backend APIs, automated CI/CD pipelines, and secure data integrations.',
+    highlights: ['FastAPI & React', 'Azure Cloud Services', 'OAuth2 & Mutual TLS', 'CI/CD & ETL Pipelines'],
+    details: [
+      '• Contributed to the development of PrimaryPROMS, a healthcare web app focused on Patient-Reported Outcome Measures, built with FastAPI, React, and Azure.',
+      '• Designed and implemented a GitHub Actions CI/CD pipeline to automate Docker image builds and deployments to Azure Container Apps.',
+      '• Integrated external platform APIs using OAuth2 and Mutual TLS to enable secure data exchange with external clinics.',
+      '• Built an automated data pipeline triggered by patient registration to fetch appointment data from external practices and forward it to third-party platforms.',
+      '• Deployed and maintained a staging environment supporting a Power BI reporting solution on an Ubuntu Linux virtual machine.',
+      '• Engineered backend APIs using Python and FastAPI by organizing application logic into schemas, models, routers, and service layers.',
+      '• Implemented and deployed a daily scheduled cron job with container workflows to monitor upcoming appointments across an 8-day rolling window.',
+      '• Configured system monitoring and automated alerting workflows to track data pipeline health.',
+      '• Developed an automated ETL pipeline in Python that processed over 20,000 patient records using cron jobs within containerized microservices.',
+      '• Configured and deployed Azure infrastructure services, including Storage Accounts, Key Vaults, Function Apps, and Container Apps, enabling secure and scalable frontend and backend deployments.'
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80',
+    ]
+  },
+  {
+    period: 'Sep 2025 – Present',
+    role: 'Full Stack Developer',
+    company: 'Yokomet (Client: Mednota, Switzerland)',
+    summary: 'Implemented backend features and built integration workflows using a microservice architecture and reliable REST APIs.',
+    highlights: ['NestJS & PostgreSQL', 'React Frontend', 'Microservices', 'REST API Design'],
+    details: [
+      '• Implemented features in the backend using NestJS, supporting workflows through a microservice architecture.',
+      '• Developed six REST APIs to integrate backend services with React-based frontend components, ensuring efficient and reliable data flow.'
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80',
+    ]
+  },
+  {
+    period: 'Jan 2025 – Apr 2025',
+    role: 'Intern',
+    company: 'STEAG Center for Smart City Technologies',
+    summary: 'Developed a thermal imaging-based fire detection prototype for STEAG Energy Services using automated IoT edge systems.',
+    highlights: ['Python & OpenCV', 'Raspberry Pi OS', 'Thermal Imaging', 'Real-time Data Logging'],
+    details: [
+      '• Developed a thermal imaging-based fire detection prototype for STEAG Energy Services.',
+      '• Integrated a TOPDON TC001 thermal camera with a Linux-based Raspberry Pi OS for automated data collection.',
+      '• Utilized thermal camera output to extract and analyze temperature data in real time using OpenCV and Python on Raspberry Pi.',
+      '• Automated logging of image names and temperature data from the thermal camera into text files.',
+      '• Generated annotated thermal image grids for visualization.'
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80'
+      
+    ]
+  }
+];
 
   let activeExperience = null;
   let activeImageIndex = 0;

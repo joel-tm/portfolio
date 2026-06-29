@@ -11,8 +11,11 @@
 </script>
 
 <svelte:head>
-  <title>Jo | Software Developer</title>
-</svelte:head>
+  <title>Joel | Portfolio</title>
+  
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>💻</text></svg>" />
+
+  </svelte:head>
 
 <main class="portfolio-shell">
   <HeroSection />

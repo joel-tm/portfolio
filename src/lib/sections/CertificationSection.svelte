@@ -1,59 +1,76 @@
 <script>
   import './CertificationSection.css';
 
-  const certificatesLeft = [
-    {
-      title: 'Microsoft Azure Fundamentals (AZ-900)',
-      issuer: 'Microsoft',
-      focus: 'Cloud concepts, Azure services, governance, cost models',
-      year: '2025',
-    },
-    {
-      title: 'GitHub Actions & CI/CD',
-      issuer: 'GitHub',
-      focus: 'Workflow automation, release pipelines, repository security',
-      year: '2025',
-    },
-    {
-      title: 'Docker for Production Workloads',
-      issuer: 'Docker',
-      focus: 'Containerization, image strategy, runtime optimization',
-      year: '2024',
-    },
-    {
-      title: 'Kubernetes Application Developer',
-      issuer: 'Cloud Native Training',
-      focus: 'Pods, deployments, service networking, rollout strategies',
-      year: '2024',
-    },
-  ];
+const visibleCount = 3;
 
-  const certificatesRight = [
+const certificatesLeft = [
+  {
+    title: 'Microsoft Certified: Azure Administrator Associate',
+    issuer: 'Microsoft',
+    focus: 'Identity management, cloud governance, virtual networking, and storage solutions',
+  },
+  {
+    title: 'Elasticsearch Essential Training',
+    issuer: 'LinkedIn',
+    focus: 'Distributed search engines, indexing strategies, cluster health, and data analysis',
+  },
+  {
+    title: 'Learning Kubernetes',
+    issuer: 'LinkedIn',
+    focus: 'Container orchestration, pod configuration, service routing, and deployment basics',
+  },
+  {
+    title: 'Programming Foundations: Databases',
+    issuer: 'LinkedIn',
+    focus: 'Relational data modeling, DBMS fundamentals, and SQL query structure',
+  },
+];
+
+const certificatesRight = [
+  {
+    title: 'OpenShift Essential Training: Container Orchestration and Deployment',
+    issuer: 'LinkedIn',
+    focus: 'Enterprise Kubernetes management, cluster deployment, and cloud-native strategies',
+  },  
     {
-      title: 'Advanced TypeScript Engineering',
-      issuer: 'Frontend Masters',
-      focus: 'Type safety, API contracts, scalable component patterns',
-      year: '2025',
-    },
-    {
-      title: 'React Performance & Architecture',
-      issuer: 'Meta Learning',
-      focus: 'State boundaries, rendering strategy, bundle control',
-      year: '2024',
-    },
-    {
-      title: 'PostgreSQL Performance Tuning',
-      issuer: 'Database Academy',
-      focus: 'Query plans, indexing strategy, reliability and scale',
-      year: '2024',
-    },
-    {
-      title: 'Applied AI with TensorFlow & PyTorch',
-      issuer: 'ML Institute',
-      focus: 'Model pipelines, practical deployment and evaluation',
-      year: '2025',
-    },
-  ];
+    title: 'Microsoft Certified: Azure AI Fundamentals',
+    issuer: 'Microsoft',
+    focus: 'AI workloads, computer vision, natural language processing, and ML workloads on Azure',
+  },
+  {
+    title: 'Exploring Web Scraping with Python',
+    issuer: 'Pluralsight',
+    focus: 'Automated data extraction, DOM parsing, HTTP requests, and Python scripting',
+  },
+  {
+    title: 'Certified English Proficiency',
+    issuer: 'Duolingo English Test',
+    focus: 'Professional English communication, comprehensive literacy, and conversational fluency',
+  },
+  {
+    title: 'Machine Learning using R',
+    issuer: 'TECHMAGHI',
+    focus: 'Statistical modeling, predictive analytics, and data pipeline construction in R',
+  },
+  {
+    title: 'Build, Train, and Deploy Your First Neural Network with TensorFlow 2',
+    issuer: 'Pluralsight',
+    focus: 'Deep learning architectures, neural network training, and model optimization',
+  },
+  {
+    title: 'Arduino',
+    issuer: 'Udemy',
+    focus: 'Microcontroller programming, digital systems, hardware prototyping, and Arduino IDE',
+  },
+];
+
+  let isExpanded = false;
+
+  const hasMoreCertificates = certificatesLeft.length > visibleCount || certificatesRight.length > visibleCount;
+
+  function toggleExpanded() {
+    isExpanded = !isExpanded;
+  }
 </script>
 
 <section class="certification-section" id="certifications">
@@ -65,7 +82,7 @@
 
     <div class="certification-split">
       <div class="certification-column" aria-label="Certificates column one">
-        {#each certificatesLeft as cert}
+        {#each (isExpanded ? certificatesLeft : certificatesLeft.slice(0, visibleCount)) as cert}
           <article class="certificate-card">
             <div class="cert-chip">{cert.year}</div>
             <div class="cert-copy">
@@ -78,7 +95,7 @@
       </div>
 
       <div class="certification-column" aria-label="Certificates column two">
-        {#each certificatesRight as cert}
+        {#each (isExpanded ? certificatesRight : certificatesRight.slice(0, visibleCount)) as cert}
           <article class="certificate-card">
             <div class="cert-chip">{cert.year}</div>
             <div class="cert-copy">
@@ -90,5 +107,13 @@
         {/each}
       </div>
     </div>
+
+    {#if hasMoreCertificates}
+      <div class="certification-actions">
+        <button class="certification-toggle" type="button" on:click={toggleExpanded}>
+          {isExpanded ? 'View Less' : 'View More'}
+        </button>
+      </div>
+    {/if}
   </div>
 </section>

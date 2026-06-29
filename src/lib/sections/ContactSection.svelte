@@ -8,9 +8,9 @@
       <p class="eyebrow">Get In Touch</p>
       <h3>Available for product builds, redesigns, and engineering consulting.</h3>
       <div class="contact-links">
-        <a href="mailto:jo@example.com">jo@example.com</a>
-        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:joeltmathew4@gmail.com">joeltmathew4@gmail.com</a>
+        <a href="https://github.com/joel-tm" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/joel-t-mathew/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
 
       <form class="contact-form" action="#" method="post">
